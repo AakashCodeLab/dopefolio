@@ -33,10 +33,13 @@
     margin-bottom: 3.5rem;
     position: relative;
     &--lt {
-      color: #fff;
+      // color: #fff;
+      color: #111;
+      font-weight: 800;
       &::after {
         content: '';
-        background: #fff !important;
+        // background: #fff !important;
+        background: #7843e9!important;
       }
     }
     &::after {
@@ -71,7 +74,8 @@
     }
 
     &--lt {
-      color: #eee;
+     // color: #eee;
+     color: #333;
     }
   }
 }
@@ -89,10 +93,10 @@
 }
 
 .btn {
-  background: #fff;
-  color: #333;
+  background: #7843e9;
+  color: #fff;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   display: inline-block;
   font-weight: 700;
   border-radius: $commonBorderRadius;
@@ -133,7 +137,7 @@
 }
 
 .text-primary {
-  color: #fff;
+  color: #333;
   font-size: 2.2rem;
   text-align: center;
   width: 100%;
