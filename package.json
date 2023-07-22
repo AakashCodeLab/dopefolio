@@ -4,17 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:scss": "node-sass sass/main.scss css/style.css -w",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.css",
-    "compress:css": "node-sass css/style.css css/style.css --output-style compressed",
-    "build": "npm-run-all prefix:css compress:css"
+    "watch-sass": "node-sass sass/main.scss css/style.css --watch",
+    "compile-sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat-css": "concat -o css/style.concat.css css/style.css css/style.comp.css",
+    "prefix-css": "postcss --use autoprefixer -b 'last 5 versions' css/style.concat.css -o css/style.prefix.css",
+    "compress-css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build-css": "npm-run-all compile-sass concat-css prefix-css compress-css"
   },
   "author": "",
   "license": "GPL-3.0",
   "devDependencies": {
-    "autoprefixer": "^10.3.1",
-    "node-sass": "^6.0.1",
+    "autoprefixer": "^10.4.13",
+    "concat": "^1.0.3",
+    "node-sass": "^8.0.0",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^8.3.1"
+    "postcss-cli": "^10.1.0"
   }
 }
