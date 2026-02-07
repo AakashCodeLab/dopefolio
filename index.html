@@ -20,6 +20,14 @@
     <meta property="og:type" content="website" />
     <!-- <meta property="og:image" content="https://i.ibb.co/C8Wnkrt/pretty-snap-2022-3-29-16-11.png" /> -->
   
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#7843e9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Aakash Portfolio" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png" />
+
     <link href='css/style.css' rel='stylesheet'/>
   
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -492,5 +500,20 @@
     </footer>
     <script src="./index.js"></script>
     <script src="//code.tidio.co/porfikdqy609gmgmhssg0o0vjglrcknm.js" async></script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('Service Worker registered successfully:', registration.scope);
+            })
+            .catch((error) => {
+              console.log('Service Worker registration failed:', error);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
