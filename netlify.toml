@@ -1,9 +1,5 @@
 [build]
-  command = "npm run compile-sass && npm run concat-css && npm run prefix-css && npm run compress-css"
   publish = "."
-
-[build.environment]
-  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"
