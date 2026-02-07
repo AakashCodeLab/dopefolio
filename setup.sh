@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Dopefolio Setup Script
+# Aakash Singh Portfolio - Setup Script
 # This script checks prerequisites and sets up the project
 
 set -e
@@ -13,7 +13,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 echo -e "${BLUE}╔════════════════════════════════════════╗${NC}"
-echo -e "${BLUE}║   Dopefolio - Setup Script           ║${NC}"
+echo -e "${BLUE}║   Aakash Portfolio - Setup Script    ║${NC}"
 echo -e "${BLUE}╔════════════════════════════════════════╗${NC}"
 echo ""
 

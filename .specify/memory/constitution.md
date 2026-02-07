@@ -1,13 +1,13 @@
 <!--
 SYNC IMPACT REPORT
 ==================
-Version: 1.0.0 (Initial Constitution - Dopefolio Project)
+Version: 1.0.0 (Initial Constitution - Aakash Singh Portfolio)
 Ratification Date: 2026-02-07
 Last Amended: 2026-02-07
 
 Modified Principles: N/A (Initial version)
 Added Sections:
-  - Complete constitution structure for dopefolio portfolio website
+  - Complete constitution structure for Aakash Singh portfolio website
   - 7 core frontend development principles
   - Governance and compliance framework
   - Mobile-first and accessibility standards

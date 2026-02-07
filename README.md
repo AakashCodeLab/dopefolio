@@ -1,6 +1,6 @@
-# Dopefolio - Personal Portfolio Website
+# Aakash Singh - Portfolio Website
 
-A modern, responsive personal portfolio website built with vanilla HTML, SASS, and JavaScript to showcase frontend web development skills and projects.
+A modern, responsive personal portfolio website built with vanilla HTML, SASS, and JavaScript to showcase software development skills and projects.
 
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 ![Node Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)

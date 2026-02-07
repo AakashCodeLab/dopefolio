@@ -1,7 +1,7 @@
 {
-  "name": "dopefolio",
+  "name": "aakash-portfolio",
   "version": "1.0.0",
-  "description": "Personal portfolio website showcasing frontend web development skills",
+  "description": "Aakash Singh's personal portfolio website showcasing software development skills",
   "main": "index.js",
   "scripts": {
     "start": "python3 -m http.server 8000",
