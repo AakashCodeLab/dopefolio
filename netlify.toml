@@ -1,13 +1,9 @@
 [build]
-  command = "echo 'Static site - no build needed'"
+  command = ""
   publish = "."
 
 [build.environment]
   NODE_VERSION = "18"
-  NODE_ENV = "production"
-  SKIP_INSTALL_DEPS = "true"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
