@@ -1,9 +1,11 @@
 [build]
   command = ""
   publish = "."
+  ignore = "/bin/false"  # Never build - always deploy
 
 [build.environment]
   NODE_VERSION = "18"
+  NPM_FLAGS = "--prefer-offline --no-audit"
 
 [[redirects]]
   from = "/*"
