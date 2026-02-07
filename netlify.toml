@@ -1,11 +1,11 @@
 [build]
-  command = ""
+  command = "echo 'Static site - no build needed'"
   publish = "."
-  ignore = "/bin/false"  # Never build - always deploy
 
 [build.environment]
   NODE_VERSION = "18"
-  NPM_FLAGS = "--prefer-offline --no-audit"
+  NODE_ENV = "production"
+  SKIP_INSTALL_DEPS = "true"
 
 [[redirects]]
   from = "/*"
