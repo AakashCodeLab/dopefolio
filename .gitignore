@@ -1,5 +1,6 @@
-# Dependencies
+# Dependencies (keep local for development, skip on Netlify)
 node_modules/
+package.json
 package-lock.json
 
 # Build outputs (keep compiled CSS for deployment)
