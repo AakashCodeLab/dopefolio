@@ -3,12 +3,66 @@
   flex-wrap: wrap;
   &__skill {
     padding: 1rem 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     margin-right: 1.5rem;
     font-size: 1.6rem;
     background: rgba(#999, 0.2);
     border-radius: $commonBorderRadius;
     font-weight: 600;
     color: #777;
+    position: relative;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+    }
+    
+    &--learning {
+      background: rgba($themeClrPrimary, 0.08);
+      color: #666;
+      border: 1px solid rgba($themeClrPrimary, 0.2);
+      animation: pulse-glow 2.5s ease-in-out infinite;
+      
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba($themeClrPrimary, 0.2);
+      }
+    }
+  }
+  
+  &__badge {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $themeClrPrimary;
+    background: rgba($themeClrPrimary, 0.15);
+    padding: 0.3rem 0.8rem;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    animation: badge-pulse 2.5s ease-in-out infinite;
   }
 }
+
+// Subtle pulse animation for learning skills
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba($themeClrPrimary, 0);
+  }
+  50% {
+    box-shadow: 0 0 8px 2px rgba($themeClrPrimary, 0.15);
+  }
+}
+
+// Badge pulse animation
+@keyframes badge-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+

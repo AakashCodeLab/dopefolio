@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splash Screen Test</title>
+  <link href='css/style.css' rel='stylesheet'/>
+</head>
+<body>
+  <!-- Splash Screen -->
+  <div class="splash-screen" id="splashScreen">
+    <div class="splash-screen__content">
+      <h1 class="splash-screen__greeting" id="splashGreeting">Hello</h1>
+    </div>
+  </div>
+  
+  <h1 style="margin-top: 200px; text-align: center;">Content Below Splash</h1>
+  
+  <script>
+    // Splash Screen with rotating greetings
+    document.addEventListener('DOMContentLoaded', function() {
+      const splashScreen = document.getElementById('splashScreen')
+      const greetingElement = document.getElementById('splashGreeting')
+      
+      if (!splashScreen || !greetingElement) {
+        console.error('Splash screen elements not found!')
+        return
+      }
+      
+      console.log('Splash screen initialized')
+      
+      // Lock body scroll
+      document.body.classList.add('splash-active')
+      
+      // Greetings in multiple languages
+      const greetings = [
+        'Hello',        // English
+        'नमस्ते',       // Hindi
+        'नमस्कार',      // Marathi
+        'Bonjour'       // French
+      ]
+      
+      let currentIndex = 0
+      
+      // Rotate greetings
+      const rotateGreeting = setInterval(() => {
+        currentIndex = (currentIndex + 1) % greetings.length
+        greetingElement.style.opacity = '0'
+        
+        setTimeout(() => {
+          greetingElement.textContent = greetings[currentIndex]
+          greetingElement.style.opacity = '1'
+          console.log('Greeting changed to:', greetings[currentIndex])
+        }, 200)
+      }, 700)
+      
+      // Auto-dismiss after 3 seconds
+      setTimeout(() => {
+        console.log('Dismissing splash screen')
+        clearInterval(rotateGreeting)
+        splashScreen.classList.add('splash-screen--hidden')
+        document.body.classList.remove('splash-active')
+        
+        // Remove from DOM after animation completes
+        setTimeout(() => {
+          splashScreen.remove()
+          console.log('Splash screen removed from DOM')
+        }, 600)
+      }, 3000)
+    })
+  </script>
+</body>
+</html>

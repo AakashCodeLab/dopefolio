@@ -1,0 +1,29 @@
+# UI-Patch Development Guidelines
+
+Auto-generated from all feature plans. Last updated: 2026-01-19
+
+## Active Technologies
+
+- TypeScript (Angular) + Angular CLI app, DDCC/Dewdrops (`@dewdrops/*`), RxJS (001-custom-translation-tabs)
+
+## Project Structure
+
+```text
+src/
+tests/
+```
+
+## Commands
+
+npm test && npm run lint
+
+## Code Style
+
+TypeScript (Angular): Follow standard conventions
+
+## Recent Changes
+
+- 001-custom-translation-tabs: Added TypeScript (Angular) + Angular CLI app, DDCC/Dewdrops (`@dewdrops/*`), RxJS
+
+<!-- MANUAL ADDITIONS START -->
+<!-- MANUAL ADDITIONS END -->
