@@ -1,19 +1,22 @@
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+// Load configuration and mixins (no namespace for convenience)
+@use 'abstracts' as *;
 
+// Base styles
+@use 'base/base';
 
-@import 'base/base';
+// Utilities
+@use 'abstracts/utilities';
 
-@import 'abstracts/utilities';
+// Pages
+@use 'pages/home';
+@use 'pages/project-case-study';
 
-@import 'pages/home';
-@import 'pages/project-case-study';
-
-@import 'components/splash-screen';
-@import 'components/header';
-@import 'components/footer';
-@import 'components/skills';
-@import 'components/mouse-scroll';
+// Components
+@use 'components/splash-screen';
+@use 'components/header';
+@use 'components/footer';
+@use 'components/skills';
+@use 'components/mouse-scroll';
 
 
 
